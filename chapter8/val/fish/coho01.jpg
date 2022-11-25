@@ -1,0 +1,511 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"615cdf4832",applicationID:"342193431"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<link rel="shortcut icon" href="https://www.neefusa.org/sites/default/files/favicon-32x32.png" type="image/png" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+<meta name="description" content="NEEF&#039;s Our Greening STEM Hub has the resources educators need to engage students with nature. Greening STEM focuses on real-world challenges within the natural environment.It incorporates elements of place-based learning, three-dimensional learning and project-based learning to better teach STEM subjects." />
+<meta name="generator" content="Drupal 7 (https://www.drupal.org)" />
+<link rel="image_src" href="https://www.neefusa.org/sites/default/files/field/image/WEB19-EEWeek-GreeningSTEM-OurWork-OutdoorClassroom-2128x2454.jpg" />
+<link rel="canonical" href="https://www.neefusa.org/education/greening-stem" />
+<link rel="shortlink" href="https://www.neefusa.org/node/224" />
+<meta property="og:site_name" content="NEEF" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.neefusa.org/education/greening-stem" />
+<meta property="og:title" content="Greening STEM Hub" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="https://www.neefusa.org/education/greening-stem" />
+<meta name="twitter:title" content="Greening STEM Hub" />
+<meta name="twitter:image" content="https://www.neefusa.org/sites/default/files/field/image/WEB19-EEWeek-GreeningSTEM-OurWork-OutdoorClassroom-2128x2454.jpg" />
+  <title>Greening STEM Hub | NEEF</title>
+  <link type="text/css" rel="stylesheet" href="https://www.neefusa.org/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.neefusa.org/sites/default/files/css/css_ZWYXUIhtwefJFfbiui3WR_pied9xp4uJL8xJPJ7iDSU.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.neefusa.org/sites/default/files/css/css_TYlWUDFcsTQeiAY_aAplfRd9GHduPFxUaymvlvvJqN0.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.neefusa.org/sites/default/files/css/css_ts8akj2PwXhipHkzTYUVBRPk66r-qz9PvXQh6ucScyg.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.neefusa.org/sites/default/files/css/css_GGrEm5zx60xdKqSMJQ2EhtOx58hGY9mzJ35gAx4m2BA.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.neefusa.org/sites/default/files/css_injector/css_injector_1.css?rl5gb7" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.neefusa.org/sites/default/files/css/css_4w5jObTu7n_5bgOK_AokcHosD52Ya-s2QWals75TByM.css" media="all" />
+
+<!--[if (lt IE 9)&(!IEMobile)]>
+<link type="text/css" rel="stylesheet" href="https://www.neefusa.org/sites/default/files/css/css_KCNZ7YudgplVMn0e5YXrEptF8K7nkEFZt5Yrs5EjYM0.css" media="all" />
+<![endif]-->
+
+<!--[if gte IE 9]><!-->
+<link type="text/css" rel="stylesheet" href="https://www.neefusa.org/sites/default/files/css/css_T8be7AvyaSpHDGbUhTdGXziwlWPCUBPd2jgChP64KCo.css" media="all" />
+<!--<![endif]-->
+  <script type="text/javascript" src="https://www.neefusa.org/sites/default/files/js/js_dxGIfXEaZtiV2AZIXHjVIzl1b6T902aR9PsqVhYwkJg.js"></script>
+<script type="text/javascript" src="https://www.neefusa.org/sites/default/files/js/js_-oEDdwe4XpUqUj4W0KJs96ENaXIrGvjBvIP-WYYBi54.js"></script>
+<script type="text/javascript" src="https://www.neefusa.org/sites/default/files/js/js_Gb9EHStCObY3oR8uputK-S5sgVlau15lq1wpRwHoWNY.js"></script>
+<script type="text/javascript" src="https://www.neefusa.org/sites/default/files/js/js_meDomBEy82aWXpUVuohOCqoX7y2SY1EL4mcRvK0f97E.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"spectacles","theme_token":"mo9G_zPKoSXDBzuHj_uudOoSWai43AovfbvpRlyKSK0","js":{"sites\/all\/modules\/contrib\/pardot\/pardot.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/extlink\/js\/extlink.js":1,"sites\/all\/themes\/spectacles\/js\/hub.js":1,"sites\/all\/themes\/spectacles\/js\/scripts\/jquery.matchHeight.js":1,"sites\/all\/themes\/spectacles\/js\/scripts\/jquery.masonry.min.js":1,"sites\/all\/themes\/spectacles\/js\/scripts\/imagesloaded.pkgd.min.js":1,"sites\/all\/themes\/spectacles\/js\/scripts\/jquery.mmenu.oncanvas.js":1,"sites\/all\/themes\/spectacles\/js\/scripts\/jquery.mmenu.offcanvas.js":1,"sites\/all\/themes\/spectacles\/js\/scripts\/jquery.mmenu.scrollbugfix.js":1,"sites\/all\/themes\/spectacles\/js\/scripts\/jquery.mmenu.fixedelements.js":1,"sites\/all\/themes\/spectacles\/js\/scripts\/imagemap.js":1,"sites\/all\/themes\/spectacles\/js\/scripts\/global.js":1,"sites\/all\/themes\/omega\/omega\/js\/jquery.formalize.js":1,"sites\/all\/themes\/omega\/omega\/js\/omega-mediaqueries.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/workflow\/workflow_admin_ui\/workflow_admin_ui.css":1,"sites\/all\/modules\/contrib\/extlink\/css\/extlink.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/field_collection\/field_collection.theme.css":1,"sites\/all\/modules\/contrib\/addtoany\/addtoany.css":1,"sites\/all\/themes\/spectacles\/css\/spectacles.css":1,"sites\/all\/themes\/spectacles\/css\/contract.css":1,"sites\/all\/themes\/spectacles\/css\/bwm-enhancements.css":1,"https:\/\/use.fontawesome.com\/releases\/v5.11.2\/css\/all.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-reset.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-mobile.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-alpha.css":1,"sites\/all\/themes\/omega\/omega\/css\/formalize.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-text.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-branding.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-menu.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-forms.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-visuals.css":1,"public:\/\/css_injector\/css_injector_1.css":1,"public:\/\/css_injector\/css_injector_2.css":1,"public:\/\/css_injector\/css_injector_8.css":1,"ie::normal::sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/normal\/alpha-default-normal-12.css":1,"sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/narrow\/alpha-default-narrow-12.css":1,"sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/normal\/alpha-default-normal-12.css":1,"sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/wide\/alpha-default-wide-12.css":1}},"pardot":{"pardot_a_id":"137431","pardot_c_id":"29305","score":""},"urlIsAjaxTrusted":{"\/search\/site":true},"extlink":{"extTarget":"_blank","extClass":0,"extLabel":"(link is external)","extImgClass":0,"extIconPlacement":0,"extSubdomains":1,"extExclude":"","extInclude":"","extCssExclude":".no-ext-icon","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site.","mailtoClass":0,"mailtoLabel":"(link sends e-mail)","extUseFontAwesome":0},"omega":{"layouts":{"primary":"normal","order":["narrow","normal","wide"],"queries":{"narrow":"all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)","normal":"all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)","wide":"all and (min-width: 1220px)"}}}});
+//--><!]]>
+</script>
+<!-- Global site tag (gtag.js) - Google Ads: 963740003 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VG2VWN6K7B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VG2VWN6K7B');
+</script>
+<script>
+  gtag('event', 'page_view', {
+    'send_to': 'G-VG2VWN6K7B',
+    'value': 'replace with value',
+    'items': [{
+      'id': 'replace with value',
+      'location_id': 'replace with value',
+      'google_business_vertical': 'education'
+    }]
+  });
+</script>
+</head>
+<body class="html not-front not-logged-in page-node page-node- page-node-224 node-type-landing-page context-education">
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KG6NZG"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KG6NZG');</script>
+  <!-- End Google Tag Manager -->
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <div class="page clearfix" id="page">
+			<header class="section section-header">
+		<div class="menu-container clearfix">
+			<div class="grid-33 navigation">
+				<span class="navbar-toggle">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</span>
+				<div class="navToggleMenu">
+					<ul class="menu"><li class="first expanded"><a href="/">About Us</a><ul class="menu"><li class="first leaf"><a href="/about-neef">About NEEF</a></li>
+<li class="leaf"><a href="/about-neef/diversity-equity-inclusion-delete">Diversity, Equity &amp; Inclusion</a></li>
+<li class="leaf"><a href="/about-neef/annual-reports">Annual Reports</a></li>
+<li class="leaf"><a href="/about-neef/financial-forms">Financial Forms</a></li>
+<li class="leaf"><a href="/about-neef/board">Board</a></li>
+<li class="leaf"><a href="/about-neef/staff">Staff</a></li>
+<li class="leaf"><a href="/about-neef/careers">Careers</a></li>
+<li class="leaf"><a href="/about-neef/news">News Room</a></li>
+<li class="last leaf"><a href="https://www.neefusa.org/neef-impact-2022">Our Impact</a></li>
+</ul></li>
+<li class="expanded"><a href="/">Grants</a><ul class="menu"><li class="first leaf"><a href="/grants">Funding Opportunities</a></li>
+<li class="leaf"><a href="/grants/grantees">Previous Grantees</a></li>
+<li class="last leaf"><a href="/learning-center">Nonprofit Learning Center</a></li>
+</ul></li>
+<li class="expanded"><a href="/">Conservation</a><ul class="menu"><li class="first leaf"><a href="/npld">National Public Lands Day (NPLD)</a></li>
+<li class="leaf"><a href="/conservation/public-lands-engagement/activity-guides">Public Lands Engagement</a></li>
+<li class="leaf"><a href="/employee-engagement">Employee Engagement</a></li>
+<li class="last leaf"><a href="https://www.neefusa.org/giving-tuesday-now">Restoration &amp; Resilience Fund</a></li>
+</ul></li>
+<li class="expanded active-trail"><a href="/" class="active-trail">Education</a><ul class="menu"><li class="first leaf"><a href="/education">K-12 Education</a></li>
+<li class="leaf"><a href="/education/eeweek">EE Week</a></li>
+<li class="leaf active-trail"><a href="/education/greening-stem" class="active-trail active">Greening STEM</a></li>
+<li class="last leaf"><a href="/education/climate-superstars">Climate Superstars</a></li>
+</ul></li>
+<li class="expanded"><a href="/">Health</a><ul class="menu"><li class="first leaf"><a href="/health-wellness">Health </a></li>
+<li class="leaf"><a href="/health/asthma">Pediatric Asthma</a></li>
+<li class="last leaf"><a href="/sunwise">SunWise</a></li>
+</ul></li>
+<li class="last expanded"><a href="/">Connect</a><ul class="menu"><li class="first leaf"><a href="/sign-up">Sign Up with NEEF</a></li>
+<li class="last leaf"><a href="/contact">Contact NEEF</a></li>
+</ul></li>
+</ul>				</div>
+			</div>
+			<div class="grid-33 logo">
+				<a href="/">
+					<img src="https://www.neefusa.org/sites/default/files/neef-logo-colour_0.png" alt="NEEF: National Environmental Education Foundation"/>
+				</a>
+			</div>
+              <div class="grid-33 donate-region-wrapper" id="region-donate">
+  <div class="region-inner region-donate-inner">
+    <div class="block block-block block-19 block-block-19 odd block-without-title" id="block-block-19">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <p class="header-links"><a class="donatebtn partner " href="/support-neef" style="font-color: #002856;margin-left:20px;">Partner</a> <a class="donatebtn donate" href="/support-neef/ways-to-give" style="font-color: #002856;">Donate</a> <!-- <div class="donorBlock"><span class="donatebtn"><a class="donatebtn" href="/support-neef/ways-to-give">Donate</a></span>  <span class="donatebtn">Donate</span><ul class="donateToggleMenu"><li><a href="https://donorbox.org/general-donation-30?amount=25">$25</a></li><li><a href="https://donorbox.org/general-donation-30?amount=50">$50</a></li><li><a href="https://donorbox.org/general-donation-30?amount=100">$100</a></li><li><a href="https://donorbox.org/general-donation-30?amount=150">$150</a></li><li><a href="https://donorbox.org/general-donation-30?amount=250">$250</a></li><li><a href="https://donorbox.org/general-donation-30?amount=500">$500</a></li><li><a href="https://donorbox.org/general-donation-30?amount=1000">$1000</a></li><li><a href="https://donorbox.org/general-donation-30?amount=">OTHER</a></li></ul> --></p>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+      		</div>
+	</header>
+			<section id="section-content" class="section section-content">
+  <div id="zone-content-wrapper" class="zone-wrapper zone-content-wrapper clearfix">  <div id="zone-content" class="zone zone-content clearfix container-12">
+          <div id="breadcrumb" class="grid-12"><h2 class="element-invisible">You are here</h2><div class="breadcrumb"><a href="/">Home</a> » <a href="/">Education</a></div></div>
+            <div class="grid-12 region region-content" id="region-content">
+  <div class="region-inner region-content-inner">
+    <a id="main-content"></a>
+            <div class="block block-system block-main block-system-main odd block-without-title" id="block-system-main">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <div class="template1">
+<article about="/education/greening-stem" typeof="sioc:Item foaf:Document" class="node node-landing-page node-published node-not-promoted node-not-sticky author-12 odd clearfix" id="node-landing-page-224">
+        <span property="dc:title" content="Greening STEM Hub" class="rdf-meta element-hidden"></span>  
+  <div class="content clearfix">
+    <div class="field field-name-field-main-feature field-type-entityreference field-label-hidden" class="field field-name-field-main-feature field-type-entityreference field-label-hidden"><div class="field-items"><div class="field-item even">        <div class="homepage_feature_wrapper">
+      <div class="field field-name-field-photo field-type-file field-label-hidden" class="field field-name-field-photo field-type-file field-label-hidden"><div class="field-items"><div class="field-item even"><div id="file-3079" class="file file-image file-image-jpeg" class="file file-image file-image-jpeg">
+
+  
+  <div class="content">
+    <img typeof="foaf:Image" src="https://www.neefusa.org/sites/default/files/styles/hero_block/public/homepage/WEB19-EEWeek-GreeningSTEM-Banner-OutdoorClassroom-5568x1856.jpg?itok=FtFuXuRM" width="1900" height="633" alt="Outdoor classroom, Greening STEM" /><div class="field field-name-field-image-credit field-type-link-field field-label-hidden" class="field field-name-field-image-credit field-type-link-field field-label-hidden"><div class="field-items"><div class="field-item even"><a href="https://stock.adobe.com/images/group-of-school-children-with-teacher-on-field-trip-in-nature-learning-science/294439583">Halfpoint</a></div></div></div><div class="image-credit-toggle js">&copy;</div><img class="hero-image-bottom" src="/sites/all/themes/spectacles/images/hero-mask.png" />  </div>
+
+  
+</div>
+</div></div></div>                
+    </div>
+    
+      </div></div></div>    <div class="main_content_wrapper">
+      <h1>Greening STEM Hub</h1>
+    <div class="field-collection-container clearfix"><div class="field field-name-field-section field-type-field-collection field-label-hidden" class="field field-name-field-section field-type-field-collection field-label-hidden"><div class="field-items"><div class="field-item even"><div class="field-collection-view clearfix view-mode-full"><div  about="/field-collection/field-section/33" class="entity entity-field-collection-item field-collection-item-field-section">
+  <div class="content">
+    <div class="field field-name-field-feature-blocks field-type-blockreference field-label-hidden" class="field field-name-field-feature-blocks field-type-blockreference field-label-hidden"><div class="field-items"><div class="field-item even wide"><div class="block block-bean block-free-text-greening-stem-landing- block-bean-free-text-greening-stem-landing- odd block-without-title" id="block-bean-free-text-greening-stem-landing-">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <div class="free-text-wrapper"><p>Welcome to the <strong>Greening STEM Hub!</strong> Whether you are an educator, a parent, or simply want to know more about environmental education, you've come to the right place. Here you can find a plethora of tools and resources to help engage learners of all ages with practical lessons in science, technology, engineering, and math (STEM) that <strong>focus on real-world challenges within the natural environment.</strong></p><p>At NEEF, we believe our natural environment is a ready-made classroom for teaching STEM. That is why we developed the <strong>Greening STEM approach</strong> to make&nbsp;environmental issues more relevant and accessible for both educators and learners.&nbsp;Greening STEM promotes&nbsp;partnerships<strong>&nbsp;</strong>where formal and informal educators can gain experience and confidence by&nbsp;<strong>collaborating to</strong>&nbsp;<strong>design, develop, and co-deliver standards-based STEM learning activities</strong>.</p><p><strong>The Greening STEM approach is an adaptable framework for creating a series of integrated and holistic learning activities.&nbsp;</strong>It is&nbsp;broad enough to accommodate the various educational standards and competencies, yet adaptable enough to operate outside of that framework. Educators and learners who follow&nbsp;the Greening STEM approach are likely to apply it to other real-world scenarios,&nbsp;and <strong>often become&nbsp;champions for organizational or systemic change within their communities.</strong></p><p>Use the links on this page to learn more about Greening STEM, including information and resources to help you get started.</p><p>&nbsp;</p>
+</div>    </div>
+  </div>
+</div></div></div></div>  </div>
+</div>
+</div></div><div class="field-item odd"><div class="field-collection-view clearfix view-mode-full"><div  about="/field-collection/field-section/32" class="entity entity-field-collection-item field-collection-item-field-section">
+  <div class="content">
+    <div class="field field-name-field-section-title field-type-text field-label-hidden" class="field field-name-field-section-title field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">Greening STEM</div></div></div><div class="field field-name-field-feature-blocks field-type-blockreference field-label-hidden" class="field field-name-field-feature-blocks field-type-blockreference field-label-hidden"><div class="field-items"><div class="field-item even wide"><div class="block block-bean block-free-text-greening-stem-hub---ii block-bean-free-text-greening-stem-hub-ii even block-without-title" id="block-bean-free-text-greening-stem-hub-ii">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <div class="free-text-wrapper"><h3>What is the Greening STEM approach?</h3>
+<p>Greening STEM is an education program model that bridges formal and non-formal STEM education. It integrates experiential learning of STEM, place-based environmental education, project-based learning, and community-based learning.</p>
+<p><a style="font-size: 15px; font-weight: bold; border: 2px solid #73A950; padding: 5px 10px; color: #73A950 !important; text-transform: uppercase; text-align: center; width: auto; float: left; background: #fff; margin-top: 5px; overflow: hidden;" href="/education/greening-stem/approach">Learn More</a></p>
+
+</div>    </div>
+  </div>
+</div></div><div class="field-item odd wide"><div class="block block-bean block-free-text-greening-stem-hub----1 block-bean-free-text-greening-stem-hub-1 odd block-without-title" id="block-bean-free-text-greening-stem-hub-1">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <div class="free-text-wrapper"><h3>Greening STEM Case Studies</h3>
+<p>Case studies of after-school programs are presented to illustrate the various components of Greening STEM. Overviews of the programs are complemented with short videos.</p>
+<p><a style="font-size: 15px; font-weight: bold; border: 2px solid #73A950; padding: 5px 10px; color: #73A950 !important; text-transform: uppercase; text-align: center; width: auto; float: left; background: #fff; margin-top: 5px; overflow: hidden;" href="/education/greening-stem/action">Learn More</a></p>
+
+</div>    </div>
+  </div>
+</div></div><div class="field-item even wide"><div class="block block-bean block-free-text-greening-stem-hub---iv block-bean-free-text-greening-stem-hub-iv even block-without-title" id="block-bean-free-text-greening-stem-hub-iv">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <div class="free-text-wrapper"><h3>Implementing the Greening STEM Approach</h3>
+<p>For the Greening STEM approach to be effective, it must be a collaborative endeavor. Here’s some information on how to begin the partnering process, including how to find and connect with local schools or organizations.</p>
+<p><a style="font-size: 15px; font-weight: bold; border: 2px solid #5fab3e; padding: 5px 10px; color: #5fab3e !important; text-transform: uppercase; text-align: center; width: auto; float: left; background: #fff; margin-top: 5px; overflow: hidden;" href="/education/greening-stem/implementation">Learn More</a></p>
+
+</div>    </div>
+  </div>
+</div></div><div class="field-item odd wide"><div class="block block-bean block-free-text-greening-stem-hub---v- block-bean-free-text-greening-stem-hub-v- odd block-without-title" id="block-bean-free-text-greening-stem-hub-v-">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <div class="free-text-wrapper"><h3>Collection of Resources</h3>
+<p>Looking for some ideas to get started? This curated collection of examples includes curriculum, lessons, and activities reviewed by Achieve, Inc. and NSTA.</p>
+<p><a style="font-size: 15px; font-weight: bold; border: 2px solid #73A950; padding: 5px 10px; color: #73A950 !important; text-transform: uppercase; text-align: center; width: auto; float: left; background: #fff; margin-top: 5px; overflow: hidden;" href="/education/greening-stem/activities-lessons-curricula">Learn More</a></p>
+
+</div>    </div>
+  </div>
+</div></div><div class="field-item even wide"><div class="block block-bean block-free-text-greening-stem-hub----0 block-bean-free-text-greening-stem-hub-0 even block-without-title" id="block-bean-free-text-greening-stem-hub-0">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <div class="free-text-wrapper"><div style="border: 2px solid #880D53; padding: 15px; margin: 5px;">
+<p><strong>Greening STEM Idea Journal for Educators</strong></p>
+<p>We created this handy PDF to guide you through each section and provide you with a space to jot down ideas for planning your own Greening STEM project.<br /><a href="/sites/default/files/assets/eeweek/2019/GreeningSTEM-IdeaJournal-V2.pdf" target="_blank"><strong>Download</strong></a></p>
+</div>
+
+</div>    </div>
+  </div>
+</div></div></div></div>  </div>
+</div>
+</div></div><div class="field-item even"><div class="field-collection-view clearfix view-mode-full"><div  about="/field-collection/field-section/554" class="entity entity-field-collection-item field-collection-item-field-section">
+  <div class="content">
+    <div class="field field-name-field-section-title field-type-text field-label-hidden" class="field field-name-field-section-title field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">Greening STEM in Action</div></div></div><div class="field field-name-field-feature-blocks field-type-blockreference field-label-hidden" class="field field-name-field-feature-blocks field-type-blockreference field-label-hidden"><div class="field-items"><div class="field-item even wide"><div class="block block-bean block-feature-k-12-education---green-0 block-bean-feature-k-12-education-green-0 odd" id="block-bean-feature-k-12-education-green-0">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <div class="feature-large-wrapper"><img class="feature-image-large" typeof="foaf:Image" src="https://www.neefusa.org/sites/default/files/styles/feature_narrow/public/homepage/WEB21-NEEF-GreeningSTEM-Colorado-HeroBanner_4500x1500.png?itok=XoivWL2E" width="860" height="287" alt="Central High School students rafting down the Colorado River as part of GreeningSTEM project" title="" />
+<div class="feature-content">
+<h2 class="feature-title"><a href="/education/greening-stem-in-action-colorado-canyon">NEEF Video Series: Greening STEM in Action Colorado</a></h2>
+<div class="feature-text">NEEF partnered with the Bureau of Land Management and the Colorado Canyon Association for a Greening STEM project along the Colorado River.</div>
+<a href="/education/greening-stem-in-action-colorado-canyon" class="more-link">Watch the Series</a>
+</div></div>    </div>
+  </div>
+</div></div><div class="field-item odd wide"><div class="block block-bean block-feature-k-12-education---greenin block-bean-feature-k-12-education-greenin even" id="block-bean-feature-k-12-education-greenin">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <div class="feature-large-wrapper"><img class="feature-image-large" typeof="foaf:Image" src="https://www.neefusa.org/sites/default/files/styles/feature_narrow/public/homepage/WEB20-Education-GreeningSTEMinAction-Banner-4800x1600.jpg?itok=MPGkXYfY" width="860" height="287" alt="Benjamin Franklin Middle School students at Teaneck Creek in New Jersey" title="" />
+<div class="feature-content">
+<h2 class="feature-title"><a href="/education/greening-stem-in-action">NEEF Video Series: Greening STEM in Action</a></h2>
+<div class="feature-text">NEEF partnered with the Teaneck Creek Conservancy and Benjamin Franklin Middle School in Teaneck, NJ to engage students at their local watershed.</div>
+<a href="/education/greening-stem-in-action" class="more-link">Watch the Series</a>
+</div></div>    </div>
+  </div>
+</div></div></div></div>  </div>
+</div>
+</div></div><div class="field-item odd"><div class="field-collection-view clearfix view-mode-full"><div  about="/field-collection/field-section/689" class="entity entity-field-collection-item field-collection-item-field-section">
+  <div class="content">
+    <div class="field field-name-field-section-title field-type-text field-label-hidden" class="field field-name-field-section-title field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">Funding Opportunity</div></div></div><div class="field field-name-field-feature-blocks field-type-blockreference field-label-hidden" class="field field-name-field-feature-blocks field-type-blockreference field-label-hidden"><div class="field-items"><div class="field-item even wide"><div class="block block-bean block-feature-grants---2022-23-blm-gre block-bean-feature-grants-2022-23-blm-gre odd" id="block-bean-feature-grants-2022-23-blm-gre">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <div class="feature-large-wrapper"><img class="feature-image-large" typeof="foaf:Image" src="https://www.neefusa.org/sites/default/files/styles/feature_narrow/public/field/image/WEB22_BLM%202022-23%20Greening%20STEM%20grant%20for%20environmental%20education%20B-4500x1500.png?itok=gfU577-m" width="860" height="287" alt="Photo of Bureau of Land Management and nonprofit partners arm in arm smiling." title="" />
+<div class="feature-content">
+<h2 class="feature-title"><a href="/resource/2022-2023-bureau-land-management-greening-stem-grants">2022-2023 Bureau of Land Management Greening STEM Grants</a></h2>
+<div class="feature-text">Funding is provided for STEM programming on BLM lands using components of NEEF’s Greening STEM model.</div>
+<a href="/resource/2022-2023-bureau-land-management-greening-stem-grants" class="more-link">Learn More</a>
+</div></div>    </div>
+  </div>
+</div></div><div class="field-item odd wide"><div class="block block-bean block-feature-grants---2022-2023-nps-2 block-bean-feature-grants-2022-2023-nps-2 even" id="block-bean-feature-grants-2022-2023-nps-2">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <div class="feature-large-wrapper"><img class="feature-image-large" typeof="foaf:Image" src="https://www.neefusa.org/sites/default/files/styles/feature_narrow/public/field/image/WEB22_NPS-21CCLC%202022-2023%20Grant.png?itok=ZPhDUQoE" width="860" height="287" alt="NPS ranger on tidal flat point out things to children who have clipboards taking notes." title="" />
+<div class="feature-content">
+<h2 class="feature-title"><a href="/resource/2022-2023-nps-21st-cclc-greening-stem-grants">2022-2023 NPS-21st CCLC Greening STEM Grants</a></h2>
+<div class="feature-text">Funding is provided for STEM programming using NEEF’s Greening STEM model for National Park Service sites and 21st Century Community Learning Centers.</div>
+<a href="/resource/2022-2023-nps-21st-cclc-greening-stem-grants" class="more-link">Learn More</a>
+</div></div>    </div>
+  </div>
+</div></div><div class="field-item even wide"><div class="block block-bean block-feature-grants---2022-2023-fores block-bean-feature-grants-2022-2023-fores odd" id="block-bean-feature-grants-2022-2023-fores">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <div class="feature-large-wrapper"><img class="feature-image-large" typeof="foaf:Image" src="https://www.neefusa.org/sites/default/files/styles/feature_narrow/public/field/image/WEB22_FS%202022-23%20Greening%20STEM%20grant%20for%20environmental%20education-4500x1500.png?itok=96bvQ44g" width="860" height="287" alt="Forest Service staff pointing to announcement board instructing group of middle school students. " title="" />
+<div class="feature-content">
+<h2 class="feature-title"><a href="/resource/2022-2023-forest-service-greening-stem-grants">2022-2023 Forest Service Greening STEM Grants</a></h2>
+<div class="feature-text">Funding is provided for STEM programming on USDA Forest Service lands using components of NEEF’s Greening STEM model.</div>
+<a href="/resource/2022-2023-forest-service-greening-stem-grants" class="more-link">Learn More</a>
+</div></div>    </div>
+  </div>
+</div></div></div></div>  </div>
+</div>
+</div></div><div class="field-item even"><div class="field-collection-view clearfix view-mode-full"><div  about="/field-collection/field-section/504" class="entity entity-field-collection-item field-collection-item-field-section">
+  <div class="content">
+    <div class="field field-name-field-section-title field-type-text field-label-hidden" class="field field-name-field-section-title field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">Resources</div></div></div><div class="field field-name-field-feature-blocks field-type-blockreference field-label-hidden" class="field field-name-field-feature-blocks field-type-blockreference field-label-hidden"><div class="field-items"><div class="field-item even wide"><div class="block block-bean block-feature-ee-week-2018---ee-week-r block-bean-feature-ee-week-2018-ee-week-r even" id="block-bean-feature-ee-week-2018-ee-week-r">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <div class="feature-large-wrapper"><img class="feature-image-large" typeof="foaf:Image" src="https://www.neefusa.org/sites/default/files/styles/feature_narrow/public/field/image/WEB19-EEWeek-GreeningSTEM-Careers-3636x2046.jpg?itok=HeBhGUkw" width="860" height="287" alt="Ecologist at a riverbank" title="" />
+<div class="feature-content">
+<h2 class="feature-title"><a href="/education/resources">Environmental Educator Resources</a></h2>
+<div class="feature-text">Check out these resources tailored for educators, citizen scientists, and more!</div>
+<a href="/education/resources" class="more-link">Read More</a>
+</div></div>    </div>
+  </div>
+</div></div><div class="field-item odd wide"><div class="block block-bean block-feature-k-12-education---ee-and- block-bean-feature-k-12-education-ee-and- odd" id="block-bean-feature-k-12-education-ee-and-">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <div class="feature-large-wrapper"><img class="feature-image-large" typeof="foaf:Image" src="https://www.neefusa.org/sites/default/files/styles/feature_narrow/public/field/image/WEB20-GreeningSTEM-1919x618-a.jpg?itok=4VKBV_5-" width="860" height="287" alt="Environmental-Education in an outdoor classroom" title="" />
+<div class="feature-content">
+<h2 class="feature-title"><a href="/education/ee-and-next-generation-science-standards">EE and the Next Generation Science Standards</a></h2>
+<div class="feature-text">The Next Generation Science Standards emphasize the development of skills students will need in for the future.</div>
+<a href="/education/ee-and-next-generation-science-standards" class="more-link">Read More</a>
+</div></div>    </div>
+  </div>
+</div></div><div class="field-item even wide"><div class="block block-bean block-feature-k-12-education---ee-an-0 block-bean-feature-k-12-education-ee-an-0 even" id="block-bean-feature-k-12-education-ee-an-0">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <div class="feature-large-wrapper"><img class="feature-image-large" typeof="foaf:Image" src="https://www.neefusa.org/sites/default/files/styles/feature_narrow/public/field/image/WEB15-EEWeek-GirlInNature-2677x1505.jpg?itok=4KC66NsK" width="860" height="287" alt="EEWeek-GirlInNature" title="" />
+<div class="feature-content">
+<h2 class="feature-title"><a href="/education/ee-and-common-core-standards">EE and the Common Core Standards</a></h2>
+<div class="feature-text">The Common Core State Standards aim to provide a consistent, clear understanding of what students are expected to learn.</div>
+<a href="/education/ee-and-common-core-standards" class="more-link">Read More</a>
+</div></div>    </div>
+  </div>
+</div></div></div></div>  </div>
+</div>
+</div></div><div class="field-item odd"><div class="field-collection-view clearfix view-mode-full field-collection-view-final"><div  about="/field-collection/field-section/505" class="entity entity-field-collection-item field-collection-item-field-section">
+  <div class="content">
+    <div class="field field-name-field-section-title field-type-text field-label-hidden" class="field field-name-field-section-title field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">NEEF Programs &amp; Initiatives</div></div></div><div class="field field-name-field-feature-blocks field-type-blockreference field-label-hidden" class="field field-name-field-feature-blocks field-type-blockreference field-label-hidden"><div class="field-items"><div class="field-item even wide"><div class="block block-bean block-feature-greening-stem-ee-week block-bean-feature-greening-stem-ee-week odd" id="block-bean-feature-greening-stem-ee-week">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <div class="feature-large-wrapper"><img class="feature-image-large" typeof="foaf:Image" src="https://www.neefusa.org/sites/default/files/styles/feature_narrow/public/homepage/WEB22-EEWeek%20Transition%20banner-4500x1500-FINALb.png?itok=3pVmBahN" width="860" height="287" alt="Teacher holding a seedling in glass jar while teaching young students in a garden" title="" />
+<div class="feature-content">
+<h2 class="feature-title"><a href="/education/eeweek">National Environmental Education Week</a></h2>
+<div class="feature-text">EE Week has changed, but our dedication to providing resources and support for EE has not. Sign up for our EE in Focus Newsletter and stay connected.</div>
+<a href="/education/eeweek" class="more-link">Learn More</a>
+</div></div>    </div>
+  </div>
+</div></div><div class="field-item odd wide"><div class="block block-bean block-feature-samsung-climate-supersta block-bean-feature-samsung-climate-supersta even" id="block-bean-feature-samsung-climate-supersta">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <div class="feature-large-wrapper"><img class="feature-image-large" typeof="foaf:Image" src="https://www.neefusa.org/sites/default/files/styles/feature_narrow/public/WEB21-Climate-Superstars-banner-image-1280x426_0.jpeg?itok=3guFMxM9" width="860" height="287" alt="Climate Superstars Students smiling in different locations" title="" />
+<div class="feature-content">
+<h2 class="feature-title"><a href="/education/climate-superstars">Samsung Climate Superstars</a></h2>
+<div class="feature-text">Presented by Samsung, ENERGY STAR®, and NEEF, Climate Superstars is an online environmental challenge to get kids excited about the environment.</div>
+<a href="/education/climate-superstars" class="more-link">Learn More</a>
+</div></div>    </div>
+  </div>
+</div></div></div></div>  </div>
+</div>
+</div></div></div></div></div><div class="field field-name-field-template field-type-list-text field-label-hidden" class="field field-name-field-template field-type-list-text field-label-hidden"><div class="field-items"><div class="field-item even">Template 1</div></div></div>      
+    </div>
+  </div>
+
+  <div class="clearfix">
+          <nav class="links node-links clearfix"></nav>
+    
+      </div>
+</article>
+</div>    </div>
+  </div>
+</div>
+      </div>
+</div>
+  </div>
+</div></section>
+		<div class="sign-up-block">
+		<a href="/sign-up">HEAR MORE FROM NEEF</a>
+	</div>
+			<footer id="section-footer" class="section section-footer">
+  <div id="zone-footer-wrapper" class="zone-wrapper zone-footer-wrapper clearfix">  <div id="zone-footer" class="zone zone-footer clearfix container-12">
+    <div class="grid-12 region region-footer-first" id="region-footer-first">
+  <div class="region-inner region-footer-first-inner">
+    <div class="block block-block block-footer-our-work block-13 block-block-13 odd block-without-title" id="block-block-13">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <h3>Our Work</h3>
+
+<ul>
+	<li><a href="/grants">Grants</a></li>
+	<li><!--StartFragment--><a href="/npld"><span data-orgid="425211032861044736" data-room-id="room_bee70f0da8d26ec465569bdb46ad7d57" data-story-id="story_4fdb8ae33e14cf05a64e2684bd9fab50" data-text="National Public Lands Day" data-timestamp="1576689530031" data-userid="424138655966412800">National Public Lands Day</span></a><!--EndFragment--></li>
+	<li><!--StartFragment--><a href="/greening-stem-learning-center"><span data-orgid="425211032861044736" data-room-id="room_bee70f0da8d26ec465569bdb46ad7d57" data-story-id="story_4fdb8ae33e14cf05a64e2684bd9fab50" data-text="Greening STEM" data-timestamp="1576689530031" data-userid="424138655966412800">Greening STEM</span></a><!--EndFragment--></li>
+	<li><!--StartFragment--><a href="/environmental-education-week"><span data-orgid="425211032861044736" data-room-id="room_bee70f0da8d26ec465569bdb46ad7d57" data-story-id="story_4fdb8ae33e14cf05a64e2684bd9fab50" data-text="Environmental Education Week" data-timestamp="1576689530031" data-userid="424138655966412800">Environmental Education Week</span></a><!--EndFragment--></li>
+	<li><!--StartFragment--><a href="/health/asthma"><span data-orgid="425211032861044736" data-room-id="room_bee70f0da8d26ec465569bdb46ad7d57" data-story-id="story_4fdb8ae33e14cf05a64e2684bd9fab50" data-text="Pediatric Asthma" data-timestamp="1576689530031" data-userid="424138655966412800">Pediatric Asthma</span></a><!--EndFragment--></li>
+	<li><!--StartFragment--><a href="/sunwise"><span data-orgid="425211032861044736" data-room-id="room_bee70f0da8d26ec465569bdb46ad7d57" data-story-id="story_4fdb8ae33e14cf05a64e2684bd9fab50" data-text="Sunwise" data-timestamp="1576689530031" data-userid="424138655966412800">Sunwise</span></a><!--EndFragment--></li>
+	<li><a href="https://www.neefusa.org/neef-impact-2022">Impact</a></li>
+</ul>
+    </div>
+  </div>
+</div>
+<div class="block block-block block-footer-resources block-14 block-block-14 even block-without-title" id="block-block-14">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <h3>Resources</h3>
+
+<ul>
+	<li><a href="/about-neef/news">News</a></li>
+	<li><a href="/about-neef/articles">Articles</a></li>
+	<li><!--StartFragment--><a href="/employee-engagement"><span data-orgid="425211032861044736" data-room-id="room_bee70f0da8d26ec465569bdb46ad7d57" data-story-id="story_4fdb8ae33e14cf05a64e2684bd9fab50" data-text="Employee Engagement Reports" data-timestamp="1576689530031" data-userid="424138655966412800">Employee Engagement Reports</span></a><!--EndFragment--></li>
+	<li><!--StartFragment--><a href="/online-courses"><span data-orgid="425211032861044736" data-room-id="room_bee70f0da8d26ec465569bdb46ad7d57" data-story-id="story_4fdb8ae33e14cf05a64e2684bd9fab50" data-text="Online Courses" data-timestamp="1576689530031" data-userid="424138655966412800">Online Courses</span></a><!--EndFragment--></li>
+	<li><!--StartFragment--><a href="/event-locator"><span data-orgid="425211032861044736" data-room-id="room_bee70f0da8d26ec465569bdb46ad7d57" data-story-id="story_4fdb8ae33e14cf05a64e2684bd9fab50" data-text="Event Map" data-timestamp="1576689530031" data-userid="424138655966412800">Event Map</span></a><!--EndFragment--></li>
+	<li><!--StartFragment--><a href="/eeweek/resources"><span data-orgid="425211032861044736" data-room-id="room_bee70f0da8d26ec465569bdb46ad7d57" data-story-id="story_4fdb8ae33e14cf05a64e2684bd9fab50" data-text="Educator Toolkits" data-timestamp="1576689530031" data-userid="424138655966412800">Educator Toolkits</span></a><!--EndFragment--></li>
+	<li><a href="https://www.neefusa.org/sustainability-tips"><span data-orgid="425211032861044736" data-room-id="room_bee70f0da8d26ec465569bdb46ad7d57" data-story-id="story_4fdb8ae33e14cf05a64e2684bd9fab50" data-text="Educator Toolkits" data-timestamp="1576689530031" data-userid="424138655966412800">Timely Tips</span></a></li>
+	<li><a href="/es"><span data-orgid="425211032861044736" data-room-id="room_bee70f0da8d26ec465569bdb46ad7d57" data-story-id="story_4fdb8ae33e14cf05a64e2684bd9fab50" data-text="NEEF en Español" data-timestamp="1576689530031" data-userid="424138655966412800">NEEF en Español</span></a></li>
+</ul>
+    </div>
+  </div>
+</div>
+<div class="block block-block block-footer-our-team block-15 block-block-15 odd block-without-title" id="block-block-15">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <h3>Our Team</h3><ul><li><a href="/contact-us">Contact Us</a></li><li><!--StartFragment--><a href="/about-neef/jobs"><span data-orgid="425211032861044736" data-room-id="room_bee70f0da8d26ec465569bdb46ad7d57" data-story-id="story_4fdb8ae33e14cf05a64e2684bd9fab50" data-text="Careers" data-timestamp="1576689530031" data-userid="424138655966412800">Careers</span></a><!--EndFragment--></li><li><a href="/about-neef/board">Board</a></li><li><!--StartFragment--><a href="/about-neef/staff"><span data-orgid="425211032861044736" data-room-id="room_bee70f0da8d26ec465569bdb46ad7d57" data-story-id="story_4fdb8ae33e14cf05a64e2684bd9fab50" data-text="Staff" data-timestamp="1576689530031" data-userid="424138655966412800">Staff</span><!--EndFragment--></a></li><li><!--StartFragment--><a href="/about-neef"><span data-orgid="425211032861044736" data-room-id="room_bee70f0da8d26ec465569bdb46ad7d57" data-story-id="story_4fdb8ae33e14cf05a64e2684bd9fab50" data-text="About NEEF" data-timestamp="1576689530031" data-userid="424138655966412800">About NEEF</span></a><!--EndFragment--></li><li><a href="/about-neef/diversity-equity-inclusion-delete"><span data-orgid="425211032861044736" data-room-id="room_bee70f0da8d26ec465569bdb46ad7d57" data-story-id="story_4fdb8ae33e14cf05a64e2684bd9fab50" data-text="About NEEF" data-timestamp="1576689530031" data-userid="424138655966412800">Diversity, Equity &amp; Inclusion</span></a></li><li><!--StartFragment--><a href="/support-neef/ways-to-give"><span data-orgid="425211032861044736" data-room-id="room_bee70f0da8d26ec465569bdb46ad7d57" data-story-id="story_4fdb8ae33e14cf05a64e2684bd9fab50" data-text="Support NEEF" data-timestamp="1576689530031" data-userid="424138655966412800">Support NEEF</span></a><!--EndFragment--></li></ul>    </div>
+  </div>
+</div>
+<div class="block block-block block-footer-stay-connected block-16 block-block-16 even block-without-title" id="block-block-16">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <h3>Stay Connected</h3>
+<p>Receive our monthly newsletter filled with stories, tips, and practical information about your environment.</p>
+<div class="sign-up"><a href="/sign-up">Sign UP!</a></div>
+<div class="social-links"><a href="https://www.facebook.com/NEEFusa" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i><span class="element-invisible">Facebook</span></a><a href="https://www.instagram.com/neefusa_org" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i><span class="element-invisible">Instagram</span></a><a href="https://twitter.com/neefusa" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i><span class="element-invisible">Twitter</span></a><a href="https://www.youtube.com/user/NEEFusa/featured" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i><span class="element-invisible">Youtube</span></a><a href="https://www.linkedin.com/company/neefusa" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i><span class="element-invisible">Linkedin</span></a></div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="grid-12 region region-footer-second" id="region-footer-second">
+  <div class="region-inner region-footer-second-inner">
+    <div class="block block-block block-footer-contact block-17 block-block-17 odd block-without-title" id="block-block-17">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <div class="footer-logo"><img alt="NEEF: National Environmental Education Foundation" src="https://www.neefusa.org/sites/default/files/neeffooterlogo.png" /></div>
+<div class="footer-contact">
+<p>National Environmental Education Foundation<br />4301 Connecticut Avenue NW, Suite 160<br />Washington, DC 20008-2326 | 202-833-2933</p>
+</div>
+    </div>
+  </div>
+</div>
+<div class="block block-block block-footer-copyright block-18 block-block-18 even block-without-title" id="block-block-18">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <p><a aria-label="Go to charitynavigator.org" class="no-ext-icon" href="https://www.charitynavigator.org/index.cfm?bay=search.summary&amp;orgid=11947" target="_blank"><div class="media media-element-container media-default"><div id="file-3658" class="file file-image file-image-jpeg" class="file file-image file-image-jpeg">
+
+  
+  <div class="content">
+    <img alt="Charity_Navigator_4Star" height="385" width="1500" style="width: 300px; height: 77px;" class="media-element no-ext-icon file-default" data-delta="1" typeof="foaf:Image" src="https://www.neefusa.org/sites/default/files/styles/article_hero/public/Charity_Navigator_4Star%20234x60bw_0.jpg?itok=gStbaBK2" />  </div>
+
+  
+</div>
+</div></a></p>
+
+<p>Copyright © 2022 NEEF</p>
+
+<p><a href="/nondiscrimination-statement">Nondiscrimination Statement</a> | EOE/AA/M/F/D/V<br>
+	<a href="/privacy-policy">NEEF and Your Privacy</a> | <a href="/terms-use">Terms of Use</a> | <a href="/state-nonprofit-disclosures">Disclosures</a></p>
+    </div>
+  </div>
+</div>
+<div class="block block-block block-hotjar block-23 block-block-23 odd block-without-title" id="block-block-23">
+  <div class="block-inner clearfix">
+            
+    <div class="content clearfix">
+      <!-- Hotjar Tracking Code for https://www.neefusa.org --><script>
+<!--//--><![CDATA[// ><!--
+
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2390813,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+
+//--><!]]>
+</script>    </div>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+</div></footer>
+	</div>
+  <script type="text/javascript" src="https://www.neefusa.org/sites/default/files/js/js_7h324ifclLGYFxFoatQ4-wnM2It7bPCH8oukRlW-nkY.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"615cdf4832","applicationID":"342193431","transactionName":"M1BUMRZXC0VSVRENVwoaYxcNGUpfXVIAHBYUXUY=","queueTime":0,"applicationTime":11,"atts":"HxdXR15NGEs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
